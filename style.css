@@ -435,3 +435,1835 @@ button:focus-visible {
     outline: 2px solid var(--blue);
     outline-offset: 4px;
 }
+
+
+/* ========================================
+   INTRODUCTION SECTION
+======================================== */
+
+.intro-section {
+    padding: 100px 8%;
+    background: var(--off-white);
+}
+
+.intro-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 65px;
+}
+
+.intro-label span {
+    width: 28px;
+    height: 2px;
+    background: var(--blue);
+}
+
+.intro-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 75px;
+}
+
+/* LEFT COLUMN */
+
+.intro-left {
+    padding-right: 35px;
+}
+
+.intro-left h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(38px, 4.2vw, 58px);
+    line-height: 1.25;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+.intro-left h2 span {
+    display: block;
+    color: var(--blue);
+}
+
+.intro-accent {
+    width: 55px;
+    height: 3px;
+    background: var(--blue);
+    margin-top: 35px;
+    border-radius: 5px;
+    animation: accentGrow 1.2s ease forwards;
+}
+
+/* RIGHT COLUMN */
+
+.intro-right {
+    border-left: 1px solid #D8DEE2;
+    padding: 12px 0 12px 55px;
+}
+
+.intro-right h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 23px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 20px;
+}
+
+.intro-right p {
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text);
+    margin-bottom: 18px;
+}
+
+.intro-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.intro-link span {
+    transition: transform 0.3s ease;
+}
+
+.intro-link:hover {
+    color: var(--blue);
+}
+
+.intro-link:hover span {
+    transform: translate(4px, -4px);
+}
+
+/* SUBTLE ENTRANCE ANIMATION */
+
+.intro-label,
+.intro-left,
+.intro-right {
+    animation: introReveal 0.9s ease both;
+}
+
+.intro-left {
+    animation-delay: 0.15s;
+}
+
+.intro-right {
+    animation-delay: 0.3s;
+}
+
+@keyframes introReveal {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes accentGrow {
+    from {
+        width: 0;
+    }
+    to {
+        width: 55px;
+    }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .intro-section {
+        padding: 75px 7%;
+    }
+
+    .intro-label {
+        margin-bottom: 40px;
+    }
+
+    .intro-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .intro-left {
+        padding-right: 0;
+    }
+
+    .intro-left h2 {
+        font-size: 42px;
+    }
+
+    .intro-right {
+        border-left: none;
+        border-top: 1px solid #D8DEE2;
+        padding: 30px 0 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-section {
+        padding: 60px 6%;
+    }
+
+    .intro-left h2 {
+        font-size: 35px;
+    }
+
+    .intro-right h3 {
+        font-size: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .intro-label,
+    .intro-left,
+    .intro-right,
+    .intro-accent {
+        animation: none;
+    }
+}
+
+
+
+/* ========================================
+   LOGISTICS PHILOSOPHY SECTION
+======================================== */
+
+.philosophy-section {
+    background: var(--navy);
+    color: var(--white);
+    padding: 100px 8% 55px;
+}
+
+.philosophy-top {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 65px;
+}
+
+.philosophy-label {
+    color: #A9BBCB;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    white-space: nowrap;
+}
+
+.philosophy-line {
+    height: 1px;
+    background: rgba(255,255,255,0.4);
+    flex: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.philosophy-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 75px;
+    align-items: start;
+}
+
+.philosophy-heading h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(38px, 4.2vw, 58px);
+    line-height: 1.25;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.philosophy-heading h2 span {
+    display: block;
+    color: #91A8BC;
+}
+
+.philosophy-content {
+    padding-top: 5px;
+}
+
+.philosophy-content p {
+    color: #D2DCE4;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.philosophy-content .philosophy-lead {
+    color: var(--white);
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    line-height: 1.55;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.philosophy-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-top: 75px;
+    padding-top: 25px;
+}
+
+.philosophy-bottom span {
+    color: #A9BBCB;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+/* ANIMATION */
+
+@keyframes philosophyLine {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+.philosophy-section.is-visible .philosophy-line {
+    animation: philosophyLine 1.3s ease-out forwards;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .philosophy-section {
+        padding: 75px 7% 40px;
+    }
+
+    .philosophy-top {
+        margin-bottom: 45px;
+    }
+
+    .philosophy-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .philosophy-heading h2 {
+        font-size: 42px;
+    }
+
+    .philosophy-bottom {
+        margin-top: 45px;
+        flex-direction: column;
+        gap: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .philosophy-section {
+        padding: 60px 6% 35px;
+    }
+
+    .philosophy-heading h2 {
+        font-size: 35px;
+    }
+
+    .philosophy-content .philosophy-lead {
+        font-size: 19px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .philosophy-line {
+        animation: none;
+    }
+}
+
+
+
+/* ========================================
+   PHILOSOPHY SECTION - HOVER EFFECTS
+======================================== */
+
+/* Heading hover */
+
+.philosophy-heading h2 {
+    transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.philosophy-heading h2:hover {
+    transform: translateX(8px);
+}
+
+.philosophy-heading h2 span {
+    transition: color 0.4s ease;
+}
+
+.philosophy-heading h2:hover span {
+    color: #B6C8D7;
+}
+
+/* Paragraph hover */
+
+.philosophy-content p {
+    transition: color 0.35s ease, transform 0.35s ease;
+}
+
+.philosophy-content p:not(.philosophy-lead):hover {
+    color: #FFFFFF;
+    transform: translateX(5px);
+}
+
+.philosophy-content .philosophy-lead {
+    transition: color 0.35s ease;
+}
+
+.philosophy-content .philosophy-lead:hover {
+    color: #B6C8D7;
+}
+
+/* Bottom principles */
+
+.philosophy-bottom span {
+    position: relative;
+    display: inline-block;
+    cursor: default;
+    transition: color 0.35s ease;
+}
+
+.philosophy-bottom span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 1px;
+    background: #A9BBCB;
+    transition: width 0.35s ease;
+}
+
+.philosophy-bottom span:hover {
+    color: #FFFFFF;
+}
+
+.philosophy-bottom span:hover::after {
+    width: 100%;
+}
+
+/* Top horizontal line */
+
+.philosophy-line {
+    transition: background 0.4s ease;
+}
+
+.philosophy-top:hover .philosophy-line {
+    background: rgba(255,255,255,0.65);
+}
+
+/* Respect reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+    .philosophy-section *,
+    .philosophy-section *::before,
+    .philosophy-section *::after {
+        transition: none !important;
+    }
+}
+
+
+
+
+/* ========================================
+   SERVICES SECTION - REDESIGNED
+======================================== */
+
+.services-section {
+    background: var(--off-white);
+    padding: 100px 8%;
+    color: var(--text);
+}
+
+/* TOP LABEL */
+
+.services-top {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 65px;
+}
+
+.services-label {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    white-space: nowrap;
+}
+
+.services-line {
+    height: 1px;
+    background: rgba(20, 45, 67, 0.25);
+    flex: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+/* INTRODUCTION */
+
+.services-intro {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 75px;
+    align-items: center;
+    margin-bottom: 75px;
+}
+
+.services-heading h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(38px, 4.2vw, 56px);
+    line-height: 1.25;
+    color: var(--navy);
+}
+
+.services-heading h2 span {
+    display: block;
+    color: var(--blue);
+}
+
+.services-description {
+    border-left: 2px solid var(--blue);
+    padding-left: 35px;
+}
+
+.services-description p {
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+/* FEATURED FREIGHT BROKERAGE */
+
+.featured-service {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: center;
+    gap: 55px;
+    background: #EEF1F2;
+    padding: 35px;
+    margin-bottom: 100px;
+}
+
+.featured-image {
+    height: 310px;
+    overflow: hidden;
+}
+
+.featured-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.featured-image:hover img {
+    transform: scale(1.04);
+}
+
+.featured-content {
+    padding: 20px 25px 20px 0;
+}
+
+.featured-number {
+    display: block;
+    color: var(--blue);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+}
+
+.featured-content h3 {
+    font-family: 'Manrope', sans-serif;
+    color: var(--navy);
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.featured-content p {
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+    color: var(--text);
+}
+
+.featured-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.featured-link span {
+    transition: transform 0.3s ease;
+}
+
+.featured-link:hover span {
+    transform: translate(4px, -4px);
+}
+
+/* TRANSPORTATION SOLUTIONS */
+
+.transport-solutions {
+    padding-top: 10px;
+}
+
+.solutions-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.solutions-label {
+    color: var(--blue);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    margin-bottom: 15px;
+}
+
+.solutions-heading h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(25px, 3vw, 36px);
+    color: var(--navy);
+}
+
+.solutions-note {
+    max-width: 280px;
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--blue);
+}
+
+
+/* SERVICE CARDS */
+
+.solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.solution-card {
+    position: relative;
+    min-height: 250px;
+    padding: 35px 28px;
+
+    border: 1px solid #D9E2E7;
+    border-radius: 4px;
+
+    background: linear-gradient(
+        145deg,
+        #FFFFFF,
+        #EAF0F3
+    );
+
+    transition:
+        background 0.4s ease,
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+/* NUMBER BADGE */
+
+.solution-number {
+    display: inline-block;
+    color: var(--blue);
+    background: #E3EBF0;
+
+    padding: 7px 12px;
+    border-radius: 3px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    margin-bottom: 30px;
+    transition: background 0.3s ease;
+}
+
+/* CARD HEADING */
+
+.solution-card h4 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--navy);
+    margin-bottom: 15px;
+
+    transition: color 0.3s ease;
+}
+
+.solution-card h4 span {
+    color: var(--blue);
+}
+
+/* CARD DESCRIPTION */
+
+.solution-card p {
+    color: #62717C;
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 300px;
+}
+
+/* ARROW */
+
+.solution-arrow {
+    position: absolute;
+    right: 28px;
+    bottom: 25px;
+
+    font-size: 20px;
+    color: var(--blue);
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+/* CARD HOVER */
+
+.solution-card:hover {
+    background: linear-gradient(
+        145deg,
+        #E3EBF0,
+        #DCE6EC
+    );
+
+    border-color: #C5D3DC;
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 28px rgba(20, 45, 67, 0.08);
+}
+
+.solution-card:hover .solution-number {
+    background: #D3E0E8;
+}
+
+.solution-card:hover .solution-arrow {
+    transform: translate(4px, -4px);
+    color: var(--navy);
+}
+
+.solution-card:hover h4 {
+    color: var(--blue);
+}
+
+/* SCROLL ANIMATION */
+
+.services-section.is-visible .services-line {
+    animation: servicesLineGrow 1.2s ease-out forwards;
+}
+
+@keyframes servicesLineGrow {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .featured-service {
+        gap: 30px;
+        padding: 25px;
+    }
+
+    .solutions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .solutions-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+    .services-section {
+        padding: 75px 7%;
+    }
+
+    .services-intro {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    .services-description {
+        padding-left: 25px;
+    }
+
+    .featured-service {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 22px;
+        margin-bottom: 65px;
+    }
+
+    .featured-image {
+        height: 240px;
+    }
+
+    .featured-content {
+        padding: 10px 0;
+    }
+
+    .featured-content h3 {
+        font-size: 27px;
+    }
+}
+
+@media (max-width: 520px) {
+    .services-section {
+        padding: 60px 6%;
+    }
+
+    .services-heading h2 {
+        font-size: 35px;
+    }
+
+    .solutions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .solution-card {
+    min-height: 220px;
+    padding: 30px 25px;
+}
+
+    .featured-image {
+        height: 210px;
+    }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+    .services-section *,
+    .services-section *::before,
+    .services-section *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .services-section .services-line {
+        transform: scaleX(1);
+    }
+}
+
+
+
+
+/* ========================================
+   WHY CHOOSE MASS LOGISTICS SECTION
+======================================== */
+
+.why-section {
+    background: #F3F6F7;
+    padding: 100px 8%;
+    color: var(--text);
+}
+
+/* TOP LABEL AND LINE */
+
+.why-top {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 65px;
+}
+
+.why-label {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    white-space: nowrap;
+}
+
+.why-line {
+    height: 1px;
+    background: #B8C7D0;
+    flex: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.why-section.is-visible .why-line {
+    animation: whyLineGrow 1.3s ease-out forwards;
+}
+
+@keyframes whyLineGrow {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* INTRODUCTION */
+
+.why-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 75px;
+    align-items: center;
+    margin-bottom: 65px;
+}
+
+.why-heading h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(36px, 4vw, 54px);
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--navy);
+    transition: transform 0.35s ease;
+}
+
+.why-heading h2 span {
+    display: block;
+    color: var(--blue);
+}
+
+.why-heading:hover h2 {
+    transform: translateX(5px);
+}
+
+.why-description {
+    border-left: 2px solid #B8C7D0;
+    padding-left: 40px;
+}
+
+.why-description p {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #526371;
+    max-width: 480px;
+}
+
+/* WHY CHOOSE CARDS */
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.why-card {
+    position: relative;
+    min-height: 250px;
+    padding: 35px 28px;
+
+    border: 1px solid #D9E2E7;
+    border-radius: 4px;
+
+    background: linear-gradient(
+        145deg,
+        #FFFFFF,
+        #EAF0F3
+    );
+
+    transition:
+        background 0.4s ease,
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+/* NUMBER BADGE */
+
+.why-number {
+    display: inline-block;
+    color: var(--blue);
+    background: #E3EBF0;
+
+    padding: 7px 12px;
+    border-radius: 3px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    margin-bottom: 30px;
+    transition: background 0.3s ease;
+}
+
+/* CARD HEADING */
+
+.why-card h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 15px;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+/* CARD DESCRIPTION */
+
+.why-card p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #62717C;
+    max-width: 300px;
+}
+
+/* ARROW */
+
+.why-arrow {
+    position: absolute;
+    right: 28px;
+    bottom: 25px;
+
+    font-size: 20px;
+    color: var(--blue);
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+/* CARD HOVER */
+
+.why-card:hover {
+    background: linear-gradient(
+        145deg,
+        #E3EBF0,
+        #DCE6EC
+    );
+
+    border-color: #C5D3DC;
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 28px rgba(20, 45, 67, 0.08);
+}
+
+.why-card:hover .why-number {
+    background: #D3E0E8;
+}
+
+.why-card:hover .why-arrow {
+    transform: translate(4px, -4px);
+    color: var(--navy);
+}
+
+/* TABLET RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .why-section {
+        padding: 80px 6%;
+    }
+
+    .why-intro {
+        gap: 40px;
+    }
+
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .why-section {
+        padding: 65px 6%;
+    }
+
+    .why-top {
+        margin-bottom: 45px;
+    }
+
+    .why-intro {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 45px;
+    }
+
+    .why-heading h2 {
+        font-size: 36px;
+    }
+
+    .why-description {
+        padding-left: 22px;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .why-card {
+        min-height: 220px;
+        padding: 30px 25px;
+    }
+
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .why-line {
+        transform: scaleX(1);
+        animation: none !important;
+    }
+
+    .why-card,
+    .why-card *,
+    .why-heading h2 {
+        transition: none !important;
+    }
+
+}
+
+
+
+
+
+
+/* ========================================
+   MASS LOGISTICS FOOTER
+======================================== */
+
+.site-footer {
+    position: relative;
+    overflow: hidden;
+
+    background-color: #91A8BA;
+
+    background-image:
+        radial-gradient(
+            ellipse at 88% 20%,
+            rgba(20, 45, 67, 0.30),
+            transparent 38%
+        ),
+        radial-gradient(
+            ellipse at 55% 110%,
+            rgba(20, 45, 67, 0.35),
+            transparent 48%
+        ),
+        repeating-linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.035) 0px,
+            rgba(255, 255, 255, 0.035) 1px,
+            transparent 1px,
+            transparent 8px
+        ),
+        linear-gradient(
+            110deg,
+            #A6B9C6 0%,
+            #91A8BA 48%,
+            #71899D 100%
+        );
+
+    color: var(--navy);
+    padding: 75px 8% 0;
+}
+
+/* MAIN FOOTER LAYOUT */
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr 1.2fr 1fr;
+    gap: 45px;
+    padding-bottom: 65px;
+    align-items: start;
+}
+
+/* BRAND */
+
+.footer-brand img {
+    width: 190px;
+    height: auto;
+    display: block;
+    margin-bottom: 25px;
+}
+
+.footer-brand p {
+    max-width: 290px;
+    color: #263746;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* FOOTER COLUMNS */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-column h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #142D43;
+    margin-bottom: 25px;
+}
+
+/* LINKS */
+
+.footer-column a {
+    color: #263746;
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 16px;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #FFFFFF;
+    transform: translateX(5px);
+}
+
+/* CONTACT */
+
+.footer-contact p {
+    color: #263746;
+    font-size: 13px;
+    line-height: 1.9;
+    max-width: 270px;
+    margin-bottom: 25px;
+}
+
+.footer-column .footer-contact-link {
+    color: #142D43;
+    font-weight: 700;
+    border-bottom: 1px solid #607991;
+    padding-bottom: 9px;
+}
+
+.footer-contact-link span {
+    display: inline-block;
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.footer-contact-link:hover span {
+    transform: translate(4px, -4px);
+}
+
+/* BOTTOM BAR */
+
+.footer-bottom {
+    border-top: 1px solid rgba(20, 45, 67, 0.25);
+    padding: 23px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-bottom p,
+.footer-bottom a {
+    color: #263746;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #FFFFFF;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+    .footer-main {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 45px;
+    }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .site-footer {
+        padding: 55px 6% 0;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 38px;
+        padding-bottom: 45px;
+    }
+
+    .footer-brand img {
+        width: 170px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .footer-column a,
+    .footer-contact-link span,
+    .footer-bottom a {
+        transition: none;
+    }
+
+}
+
+
+
+/* ========================================
+   CONTACT PAGE HERO
+======================================== */
+
+.contact-hero {
+    position: relative;
+    min-height: 540px;
+    display: flex;
+    align-items: center;
+    padding: 90px 8%;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(20, 45, 67, 0.94),
+            rgba(20, 45, 67, 0.76),
+            rgba(20, 45, 67, 0.40)
+        ),
+        url("mass-hero.png");
+
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+}
+
+.contact-hero-content {
+    max-width: 760px;
+    animation: introReveal 1s ease forwards;
+}
+
+.contact-eyebrow {
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: #B9CBD8;
+    margin-bottom: 28px;
+}
+
+.contact-hero h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.contact-hero h1 span {
+    display: block;
+    color: #B9CBD8;
+}
+
+.contact-hero-description {
+    max-width: 560px;
+    font-size: 16px;
+    line-height: 1.9;
+    color: #E0E8ED;
+    margin-bottom: 32px;
+}
+
+.contact-hero-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255,255,255,0.6);
+    padding-bottom: 10px;
+    transition: gap 0.3s ease;
+}
+
+.contact-hero-link:hover {
+    gap: 23px;
+}
+
+.contact-hero-index {
+    position: absolute;
+    bottom: 35px;
+    right: 8%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #D5E0E7;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.contact-hero-index span:first-child {
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+@media (max-width: 600px) {
+
+    .contact-hero {
+        min-height: 500px;
+        padding: 75px 7%;
+    }
+
+    .contact-hero-description {
+        font-size: 14px;
+    }
+
+    .contact-hero-index {
+        right: 7%;
+        bottom: 22px;
+    }
+
+}
+
+
+
+/* ========================================
+   CONTACT DETAILS SECTION
+======================================== */
+
+.contact-details-section {
+    padding: 100px 8%;
+    background: #F7F8F7;
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 90px;
+    align-items: center;
+}
+
+.contact-section-label {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.contact-details-heading h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(34px, 4vw, 48px);
+    line-height: 1.25;
+    color: var(--navy);
+    margin-bottom: 25px;
+}
+
+.contact-details-heading h2 span {
+    display: block;
+    color: var(--blue);
+}
+
+.contact-details-heading > p:last-child {
+    color: #62717C;
+    font-size: 15px;
+    line-height: 1.9;
+    max-width: 420px;
+}
+
+.contact-information {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.contact-info-card {
+    position: relative;
+    padding: 28px;
+    min-height: 210px;
+    border: 1px solid #D9E2E7;
+    border-radius: 4px;
+    background: linear-gradient(145deg, #FFFFFF, #EAF0F3);
+    transition: 0.4s ease;
+}
+
+.contact-info-card:last-child {
+    grid-column: 1 / -1;
+    min-height: 185px;
+}
+
+.contact-info-number {
+    display: inline-block;
+    color: var(--blue);
+    background: #E3EBF0;
+    padding: 6px 10px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 22px;
+}
+
+.contact-info-card h3 {
+    font-family: 'Manrope', sans-serif;
+    color: var(--navy);
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.contact-info-card p {
+    color: #62717C;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.contact-info-card a {
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info-card:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(145deg, #E3EBF0, #DCE6EC);
+    border-color: #C5D3DC;
+    box-shadow: 0 12px 28px rgba(20, 45, 67, 0.08);
+}
+
+.contact-info-card a:hover {
+    color: var(--navy);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .contact-details-section {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+}
+
+@media (max-width: 550px) {
+    .contact-information {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info-card:last-child {
+        grid-column: auto;
+    }
+
+    .contact-details-section {
+        padding: 75px 7%;
+    }
+}
+
+
+
+/* ========================================
+   CONTACT ENQUIRY FORM
+======================================== */
+
+.contact-form-section {
+    padding: 100px 8%;
+    background: #EEF2F4;
+}
+
+/* FORM INTRO */
+
+.form-intro {
+    max-width: 650px;
+    margin-bottom: 55px;
+}
+
+.form-intro h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(36px, 4vw, 50px);
+    line-height: 1.25;
+    color: var(--navy);
+    margin-bottom: 20px;
+}
+
+.form-intro h2 span {
+    display: block;
+    color: var(--blue);
+}
+
+.form-intro > p:last-child {
+    color: #62717C;
+    font-size: 15px;
+    line-height: 1.9;
+    max-width: 520px;
+}
+
+/* TWO COLUMN LAYOUT */
+
+.contact-form-layout {
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+    border: 1px solid #D9E2E7;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #FFFFFF;
+}
+
+/* LEFT PANEL */
+
+.form-side-panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 590px;
+    padding: 45px 38px;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(96, 121, 145, 0.30),
+            transparent 38%
+        ),
+        repeating-linear-gradient(
+            135deg,
+            rgba(255,255,255,0.025) 0px,
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px,
+            transparent 9px
+        ),
+        linear-gradient(145deg, #142D43, #243F56);
+
+    color: #FFFFFF;
+}
+
+.form-side-number {
+    color: #B9CBD8;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.form-side-panel h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(27px, 3vw, 36px);
+    line-height: 1.35;
+    font-weight: 600;
+    max-width: 340px;
+    margin-bottom: 20px;
+}
+
+.form-side-panel > p {
+    color: #D2DEE6;
+    font-size: 14px;
+    line-height: 1.9;
+    max-width: 330px;
+}
+
+.form-side-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    color: #B9CBD8;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* FORM AREA */
+
+.enquiry-form {
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group label {
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.form-group label span {
+    color: #84939D;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+/* INPUTS */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #D9E2E7;
+    border-radius: 3px;
+    background: #F8FAFB;
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input,
+.form-group select {
+    min-height: 48px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 125px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9AA7B0;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--blue);
+    background: #FFFFFF;
+    box-shadow: 0 0 0 3px rgba(96, 121, 145, 0.10);
+}
+
+/* SUBMIT BUTTON */
+
+.form-submit {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px 25px;
+    border: 1px solid var(--navy);
+    border-radius: 3px;
+    background: var(--navy);
+    color: #FFFFFF;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.form-submit span {
+    font-size: 17px;
+}
+
+.form-submit:hover {
+    background: var(--blue);
+    border-color: var(--blue);
+    transform: translateY(-3px);
+}
+
+.form-note {
+    color: #84939D;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .contact-form-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .form-side-panel {
+        min-height: 320px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .contact-form-section {
+        padding: 75px 7%;
+    }
+
+    .enquiry-form {
+        padding: 30px 22px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .form-side-panel {
+        padding: 35px 28px;
+        min-height: 300px;
+    }
+
+    .form-submit {
+        width: 100%;
+    }
+
+}

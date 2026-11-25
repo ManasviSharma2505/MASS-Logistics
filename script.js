@@ -61,3 +61,48 @@ document.addEventListener("keydown", function (event) {
     }
 
 });
+
+// PHILOSOPHY SECTION SCROLL ANIMATION
+
+const philosophySection = document.querySelector(".philosophy-section");
+
+if (philosophySection) {
+    const philosophyObserver = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    philosophySection.classList.add("is-visible");
+                    observer.unobserve(philosophySection);
+                }
+            });
+        },
+        {
+            threshold: 0.3
+        }
+    );
+
+    philosophyObserver.observe(philosophySection);
+}
+
+
+// SERVICES SECTION SCROLL ANIMATION
+
+const servicesSection = document.querySelector(".services-section");
+
+if (servicesSection) {
+    const servicesObserver = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    servicesSection.classList.add("is-visible");
+                    observer.unobserve(servicesSection);
+                }
+            });
+        },
+        {
+            threshold: 0.3
+        }
+    );
+
+    servicesObserver.observe(servicesSection);
+}

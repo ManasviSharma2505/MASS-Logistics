@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | MASS Logistics</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="MASS Logistics">
+            </a>
+        </div>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About Us</a>
+            <a href="index.html#services">Services</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="contact.html" class="active">Contact Us</a>
+        </nav>
+
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- CONTACT HERO -->
+    <section class="contact-hero">
+
+        <div class="contact-hero-content">
+
+            <p class="contact-eyebrow">
+                LET'S START A CONVERSATION
+            </p>
+
+            <h1>
+                Every good connection
+                <span>starts with a conversation.</span>
+            </h1>
+
+            <p class="contact-hero-description">
+                Whether you have a shipping requirement, want to
+                explore transportation options, or simply have a
+                question, we're here to hear from you.
+            </p>
+
+            <a href="#contact-details" class="contact-hero-link">
+                Get in touch <span>↓</span>
+            </a>
+
+        </div>
+
+        <div class="contact-hero-index">
+            <span>01</span>
+            <span>CONTACT MASS LOGISTICS</span>
+        </div>
+
+    </section>
+
+
+<!-- CONTACT DETAILS SECTION -->
+<section class="contact-details-section" id="contact-details">
+
+    <div class="contact-details-heading">
+
+        <p class="contact-section-label">GET IN TOUCH</p>
+
+        <h2>
+            Let's make your
+            <span>next move together.</span>
+        </h2>
+
+        <p>
+            Have a question or a transportation requirement?
+            Share a little about what you're looking for.
+            We'd be happy to hear from you.
+        </p>
+
+    </div>
+
+    <div class="contact-information">
+
+        <div class="contact-info-card">
+            <span class="contact-info-number">01</span>
+            <h3>Email</h3>
+            <p>For general enquiries and business conversations.</p>
+            <a href="mailto:YOUR_EMAIL_HERE">Send us an email ↗</a>
+        </div>
+
+        <div class="contact-info-card">
+            <span class="contact-info-number">02</span>
+            <h3>Phone</h3>
+            <p>Prefer speaking directly? Get in touch with our team.</p>
+            <a href="tel:YOUR_PHONE_NUMBER">Call us ↗</a>
+        </div>
+
+        <div class="contact-info-card">
+            <span class="contact-info-number">03</span>
+            <h3>Enquiries</h3>
+            <p>Tell us about your shipping needs and what you have in mind.</p>
+            <a href="#contact-form">Make an enquiry ↗</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT FORM SECTION -->
+<section class="contact-form-section" id="contact-form">
+
+    <div class="form-intro">
+        <p class="contact-section-label">SEND AN ENQUIRY</p>
+
+        <h2>
+            Tell us what
+            <span>you're looking for.</span>
+        </h2>
+
+        <p>
+            Share a few details about your requirements
+            and we'll have a better understanding of how
+            to assist you.
+        </p>
+    </div>
+
+    <div class="contact-form-layout">
+
+        <div class="form-side-panel">
+            <span class="form-side-number">MASS / CONTACT</span>
+
+            <h3>
+                Let's discuss
+                your next shipment.
+            </h3>
+
+            <p>
+                Every shipping requirement is different.
+                Tell us a little about yours to get the
+                conversation started.
+            </p>
+
+            <div class="form-side-bottom">
+                <span>THOUGHTFUL LOGISTICS.</span>
+                <span>MEANINGFUL CONNECTIONS.</span>
+            </div>
+        </div>
+
+        <form class="enquiry-form" id="enquiryForm">
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName"
+                        name="fullName" placeholder="Your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email"
+                        name="email" placeholder="Your email" required>
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone"
+                        name="phone" placeholder="Your phone number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company Name <span>(Optional)</span></label>
+                    <input type="text" id="company"
+                        name="company" placeholder="Your company">
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="service">Service Required</label>
+
+                <select id="service" name="service" required>
+                    <option value="">Select a service</option>
+                    <option>Freight Brokerage</option>
+                    <option>Full Truckload (FTL)</option>
+                    <option>Less Than Truckload (LTL)</option>
+                    <option>Dry Van Transportation</option>
+                    <option>Refrigerated Transportation</option>
+                    <option>Temperature-Controlled Shipping</option>
+                    <option>Power Only</option>
+                    <option>Other / Not Sure</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Tell us about your requirements</label>
+                <textarea id="message" name="message"
+                    rows="5" placeholder="Share your shipment details..." required></textarea>
+            </div>
+
+            <button type="submit" class="form-submit">
+                Send Enquiry <span>↗</span>
+            </button>
+
+            <p class="form-note" id="formNote">
+                Please complete the required fields before submitting.
+            </p>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
