@@ -371,6 +371,10 @@ background-repeat: no-repeat;
         padding: 16px 0;
         border-bottom: 1px solid var(--light-grey);
     }
+    
+    .nav-links .mobile-contact-link {
+    display: block;
+}
 
     /* Hide desktop contact button */
 
@@ -2266,4 +2270,10 @@ button:focus-visible {
         width: 100%;
     }
 
+}
+
+
+/* Contact link only for mobile navigation */
+.mobile-contact-link {
+    display: none;
 }
