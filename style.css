@@ -1,0 +1,437 @@
+
+/* ========================================
+   1. GLOBAL STYLES
+======================================== */
+
+:root {
+    --navy: #142D43;
+    --blue: #607991;
+    --off-white: #F7F8F7;
+    --light-grey: #E9EDEF;
+    --white: #FFFFFF;
+    --text: #263746;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--off-white);
+    color: var(--text);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ========================================
+   2. NAVBAR
+======================================== */
+
+.navbar {
+    width: 100%;
+    min-height: 90px;
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--white);
+    border-bottom: 1px solid var(--light-grey);
+
+    position: relative;
+    z-index: 1000;
+}
+
+
+/* ========================================
+   3. LOGO
+======================================== */
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo img {
+    display: block;
+    width: 190px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* ========================================
+   4. NAVIGATION LINKS
+======================================== */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+}
+
+.nav-links a {
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 1px;
+    background: var(--blue);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--blue);
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* ========================================
+   5. CONTACT BUTTON
+======================================== */
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    padding: 14px 22px;
+
+    background: var(--navy);
+    color: var(--white);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    border-radius: 7px;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.contact-btn span {
+    font-size: 17px;
+    transition: transform 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: var(--blue);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(20, 45, 67, 0.14);
+}
+
+.contact-btn:hover span {
+    transform: translate(2px, -2px);
+}
+
+
+/* ========================================
+   6. HAMBURGER MENU
+======================================== */
+
+.menu-toggle {
+    display: none;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    width: 42px;
+    height: 42px;
+    padding: 8px;
+
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+
+    background: var(--navy);
+    transition: all 0.3s ease;
+}
+
+/* Hamburger animation */
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* ========================================
+   7. HERO SECTION
+======================================== */
+
+.hero {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+
+    padding: 100px 8%;
+
+   background-image:
+    linear-gradient(
+        90deg,
+        rgba(20, 45, 67, 0.78),
+        rgba(20, 45, 67, 0.18)
+    ),
+    url("mass-hero.png");
+
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+    color: var(--white);
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-tag {
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    color: #C3D2DF;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(42px, 5.5vw, 72px);
+    line-height: 1.12;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    max-width: 520px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #E0E7ED;
+    margin-bottom: 35px;
+}
+
+
+/* ========================================
+   8. HERO BUTTONS
+======================================== */
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 15px 27px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    border-radius: 7px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Get in Touch */
+
+.primary-btn {
+    background: var(--white);
+    color: var(--navy);
+}
+
+.primary-btn:hover {
+    background: #E9EEF2;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Discover MASS */
+
+.secondary-btn {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.secondary-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* ========================================
+   9. TABLET RESPONSIVENESS
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        gap: 22px;
+    }
+
+    .logo img {
+        width: 165px;
+    }
+}
+
+
+/* ========================================
+   10. MOBILE RESPONSIVENESS
+======================================== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        min-height: 76px;
+        padding: 0 5%;
+    }
+
+    .logo img {
+        width: 145px;
+    }
+
+    /* Mobile dropdown */
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+        padding: 15px 5% 25px;
+
+        background: var(--white);
+        border-bottom: 1px solid var(--light-grey);
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 16px 0;
+        border-bottom: 1px solid var(--light-grey);
+    }
+
+    /* Hide desktop contact button */
+
+    .contact-btn {
+        display: none;
+    }
+
+    /* Show hamburger */
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Hero */
+
+    .hero {
+        min-height: 550px;
+        padding: 80px 7%;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+}
+
+
+/* ========================================
+   11. SMALL MOBILE SCREENS
+======================================== */
+
+@media (max-width: 480px) {
+
+    .logo img {
+        width: 130px;
+    }
+
+    .hero {
+        min-height: 520px;
+        padding: 65px 6%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* Smooth keyboard focus */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 4px;
+}
