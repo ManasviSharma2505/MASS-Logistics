@@ -3852,3 +3852,335 @@ button:focus-visible {
         height: 210px;
     }
 }
+
+
+/* =========================================
+   FULL FREIGHT BROKERAGE ARTICLE
+========================================= */
+
+.full-article {
+    background: #F7F8F7;
+    padding: 75px 10% 110px;
+}
+
+/* TABLE OF CONTENTS */
+
+.article-toc {
+    max-width: 1120px;
+    margin: 0 auto 85px;
+    padding: 38px 42px;
+    background: #EDF1F3;
+    border: 1px solid #DCE4E8;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 55px;
+}
+
+.toc-heading span {
+    color: #607991;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.toc-heading h2 {
+    color: #142D43;
+    font-family: 'Manrope', sans-serif;
+    font-size: 27px;
+    line-height: 1.35;
+    margin-top: 17px;
+}
+
+.article-toc nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 25px;
+}
+
+.article-toc nav a {
+    padding: 11px 0;
+    color: #354B5D;
+    text-decoration: none;
+    font-size: 12px;
+    border-bottom: 1px solid #D5DEE3;
+    transition: color 0.25s ease;
+}
+
+.article-toc nav a span {
+    color: #8095A5;
+    margin-right: 9px;
+    font-size: 10px;
+}
+
+.article-toc nav a:hover {
+    color: #607991;
+}
+
+/* ARTICLE BODY */
+
+.article-body {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.article-section {
+    padding: 65px 0;
+    border-bottom: 1px solid #DCE3E7;
+    scroll-margin-top: 40px;
+}
+
+.section-number {
+    display: block;
+    margin-bottom: 18px;
+    color: #607991;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.article-section h2,
+.article-conclusion h2 {
+    color: #142D43;
+    font-family: 'Manrope', sans-serif;
+    font-size: 34px;
+    line-height: 1.3;
+    margin: 0 0 30px;
+    font-weight: 700;
+}
+
+.article-section h3 {
+    color: #203B50;
+    font-family: 'Manrope', sans-serif;
+    font-size: 19px;
+    line-height: 1.45;
+    margin: 35px 0 13px;
+    font-weight: 650;
+}
+
+.article-section p,
+.article-conclusion p {
+    color: #566673;
+    font-size: 15px;
+    line-height: 1.95;
+    margin: 0 0 20px;
+}
+
+.article-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* IMPORTANT NOTE */
+
+.article-note {
+    margin-top: 35px;
+    padding: 25px 28px;
+    background: #EAF0F3;
+    border-left: 3px solid #607991;
+}
+
+.article-note strong {
+    display: block;
+    color: #142D43;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    margin-bottom: 9px;
+}
+
+.article-note p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* COMPARISON TABLE */
+
+.article-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 35px 0 10px;
+}
+
+.article-comparison {
+    width: 100%;
+    border-collapse: collapse;
+    background: #FFFFFF;
+    min-width: 550px;
+}
+
+.article-comparison th {
+    background: #142D43;
+    color: #FFFFFF;
+    text-align: left;
+    padding: 17px;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    font-weight: 600;
+}
+
+.article-comparison td {
+    padding: 17px;
+    border-bottom: 1px solid #E1E7EA;
+    color: #566673;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.article-comparison td:first-child {
+    color: #203B50;
+    font-weight: 700;
+}
+
+.article-comparison tbody tr:hover {
+    background: #F1F5F6;
+}
+
+/* GLOSSARY */
+
+.glossary-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 35px;
+    margin-top: 30px;
+}
+
+.glossary-item {
+    padding: 20px 0;
+    border-bottom: 1px solid #DCE3E7;
+}
+
+.glossary-item h3 {
+    margin: 0 0 8px;
+    font-size: 15px;
+}
+
+.glossary-item p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+/* FAQ */
+
+.article-faq {
+    border-bottom: none;
+}
+
+.faq-item {
+    padding: 23px 0;
+    border-bottom: 1px solid #DCE3E7;
+}
+
+.faq-item h3 {
+    margin: 0 0 10px;
+    font-size: 16px;
+}
+
+.faq-item p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* CONCLUSION */
+
+.article-conclusion {
+    margin-top: 35px;
+    padding: 55px;
+    background: #142D43;
+    position: relative;
+    overflow: hidden;
+}
+
+.article-conclusion::after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 50%;
+    right: -160px;
+    bottom: -200px;
+    pointer-events: none;
+}
+
+.article-conclusion .section-number {
+    color: #AFC2D1;
+}
+
+.article-conclusion h2 {
+    color: #FFFFFF;
+    max-width: 650px;
+}
+
+.article-conclusion p {
+    color: #D0DAE1;
+}
+
+.article-back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 13px;
+    border-bottom: 1px solid #91A9BB;
+    padding-bottom: 7px;
+    transition: color 0.25s ease;
+}
+
+.article-back-link:hover {
+    color: #AFC2D1;
+}
+
+/* ARTICLE RESPONSIVE */
+
+@media (max-width: 900px) {
+    .full-article {
+        padding: 55px 7% 80px;
+    }
+
+    .article-toc {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .full-article {
+        padding: 35px 6% 60px;
+    }
+
+    .article-toc {
+        padding: 24px 20px;
+        margin-bottom: 45px;
+    }
+
+    .article-toc nav {
+        grid-template-columns: 1fr;
+    }
+
+    .article-section {
+        padding: 45px 0;
+    }
+
+    .article-section h2,
+    .article-conclusion h2 {
+        font-size: 27px;
+    }
+
+    .article-section h3 {
+        font-size: 17px;
+    }
+
+    .article-section p,
+    .article-conclusion p {
+        font-size: 14px;
+        line-height: 1.85;
+    }
+
+    .glossary-list {
+        grid-template-columns: 1fr;
+    }
+
+    .article-conclusion {
+        padding: 35px 25px;
+    }
+}
