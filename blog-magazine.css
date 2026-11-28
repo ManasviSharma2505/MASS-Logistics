@@ -67,3 +67,22 @@
  .journal-split .journal-photo { height:250px; }
  .journal-pullquote { padding-left:22px; margin:42px 0; }
 }
+
+
+/* Editorial photo story grid on the journal landing page */
+.journal-photo-story { max-width:1180px; margin:0 auto; padding:8px 7% 100px; }
+.journal-photo-story-heading { display:flex; justify-content:space-between; align-items:end; gap:20px; padding-bottom:22px; border-bottom:1px solid #D8E0E5; }
+.journal-photo-story-heading span { color:#607991; font-size:9px; font-weight:700; letter-spacing:2px; }
+.journal-photo-story-heading h2 { margin:10px 0 0; color:#142D43; font-family:'Manrope',sans-serif; font-size:clamp(26px,3vw,38px); font-weight:600; }
+.journal-photo-grid { display:grid; grid-template-columns:1.25fr 1fr 1fr; gap:20px; margin-top:26px; }
+.journal-photo-card { min-width:0; }
+.journal-photo-card a { display:block; height:245px; overflow:hidden; background:#E9EDEF; }
+.journal-photo-card:first-child a { height:310px; }
+.journal-photo-card img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .6s ease; }
+.journal-photo-card a:hover img { transform:scale(1.04); }
+.journal-photo-card small { display:block; margin-top:15px; color:#607991; font-size:9px; font-weight:700; letter-spacing:1.5px; }
+.journal-photo-card h3 { margin:8px 0; color:#142D43; font-family:'Manrope',sans-serif; font-size:19px; line-height:1.35; font-weight:600; }
+.journal-photo-card p { margin:0; color:#647482; font-size:13px; line-height:1.7; }
+.journal-image-credit { margin-top:20px; color:#7B8993; font-size:10px; line-height:1.6; }
+@media(max-width:800px) { .journal-photo-grid { grid-template-columns:1fr 1fr; } .journal-photo-card:first-child { grid-column:1/-1; } .journal-photo-card:first-child a { height:280px; } }
+@media(max-width:560px) { .journal-photo-story { padding:0 6% 70px; } .journal-photo-grid { grid-template-columns:1fr; gap:28px; } .journal-photo-card:first-child { grid-column:auto; } .journal-photo-card a,.journal-photo-card:first-child a { height:240px; } .journal-photo-story-heading { display:block; } }
