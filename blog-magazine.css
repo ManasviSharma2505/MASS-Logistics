@@ -224,3 +224,18 @@ article.full-article.journal-layout > .journal-article {
 .journal-photo-card h3 a.journal-feature-link:hover { color:#607991; }
 .journal-card-read { display:inline-block; margin-top:12px; color:#142D43; font-size:11px; font-weight:700; letter-spacing:.4px; text-decoration:none; border-bottom:1px solid #AAB8C3; padding-bottom:5px; }
 .journal-card-read:hover { color:#607991; border-color:#607991; }
+
+
+/* Keep editorial text links natural-sized; the image frame has its own wrapper. */
+.journal-photo-card h3 a.journal-feature-link,
+.journal-photo-card .journal-card-read {
+    display: inline !important;
+    width: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    background: transparent !important;
+}
+.journal-photo-card .journal-card-read {
+    display: inline-block !important;
+}
