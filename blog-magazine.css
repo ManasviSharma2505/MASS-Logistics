@@ -98,3 +98,101 @@
 .journal-photo-card h3 { margin:8px 0 0; color:#142D43; font-family:'Manrope',sans-serif; font-size:19px; line-height:1.35; font-weight:600; }
 @media(max-width:800px) { .journal-photo-card-feature .journal-photo-card-image { height:280px; } }
 @media(max-width:560px) { .journal-photo-card-image,.journal-photo-card-feature .journal-photo-card-image { height:240px; } }
+
+
+/* FIX: keep the article contents and reading column in separate, predictable tracks */
+article.full-article.journal-layout {
+    display: grid !important;
+    grid-template-columns: minmax(190px, 240px) minmax(0, 1fr) !important;
+    column-gap: clamp(34px, 5vw, 72px) !important;
+    row-gap: 0 !important;
+    align-items: start !important;
+    width: 100% !important;
+    max-width: 1180px !important;
+    box-sizing: border-box !important;
+}
+
+article.full-article.journal-layout > aside.journal-contents {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    position: sticky !important;
+    top: 28px !important;
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    box-sizing: border-box !important;
+    padding: 22px 18px !important;
+    background: #EEF2F4 !important;
+    border-top: 2px solid #142D43 !important;
+}
+
+.journal-contents .toc-heading {
+    display: block !important;
+    margin: 0 0 22px !important;
+}
+
+.journal-contents .toc-heading h2 {
+    margin: 0 !important;
+    color: #142D43 !important;
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 24px !important;
+    line-height: 1.25 !important;
+    font-weight: 600 !important;
+}
+
+.journal-contents > nav {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+}
+
+.journal-contents > nav a {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 0 13px !important;
+    padding: 0 0 11px !important;
+    border-bottom: 1px solid #D5DEE4 !important;
+    box-sizing: border-box !important;
+}
+
+.journal-contents > nav a span {
+    display: inline-block !important;
+    margin: 0 8px 0 0 !important;
+    font-size: 9px !important;
+}
+
+article.full-article.journal-layout > .journal-article {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 790px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+
+@media (max-width: 900px) {
+    article.full-article.journal-layout {
+        grid-template-columns: minmax(0, 1fr) !important;
+        row-gap: 34px !important;
+    }
+    article.full-article.journal-layout > aside.journal-contents,
+    article.full-article.journal-layout > .journal-article {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+        position: static !important;
+        max-width: none !important;
+    }
+    .journal-contents > nav {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 0 18px !important;
+    }
+}
+
+@media (max-width: 560px) {
+    .journal-contents > nav {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+}
