@@ -196,3 +196,24 @@ article.full-article.journal-layout > .journal-article {
         grid-template-columns: minmax(0, 1fr) !important;
     }
 }
+
+
+/* Final gallery refinement: three equal editorial images with a consistent crop. */
+.journal-photo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    align-items: start;
+}
+.journal-photo-card-image,
+.journal-photo-card-feature .journal-photo-card-image {
+    height: 290px !important;
+}
+@media (max-width: 800px) {
+    .journal-photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+    .journal-photo-card-image,
+    .journal-photo-card-feature .journal-photo-card-image { height: 250px !important; }
+}
+@media (max-width: 560px) {
+    .journal-photo-grid { grid-template-columns: minmax(0, 1fr) !important; }
+    .journal-photo-card-image,
+    .journal-photo-card-feature .journal-photo-card-image { height: 240px !important; }
+}
