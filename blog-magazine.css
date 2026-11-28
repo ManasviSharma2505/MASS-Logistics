@@ -86,3 +86,15 @@
 .journal-image-credit { margin-top:20px; color:#7B8993; font-size:10px; line-height:1.6; }
 @media(max-width:800px) { .journal-photo-grid { grid-template-columns:1fr 1fr; } .journal-photo-card:first-child { grid-column:1/-1; } .journal-photo-card:first-child a { height:280px; } }
 @media(max-width:560px) { .journal-photo-story { padding:0 6% 70px; } .journal-photo-grid { grid-template-columns:1fr; gap:28px; } .journal-photo-card:first-child { grid-column:auto; } .journal-photo-card a,.journal-photo-card:first-child a { height:240px; } .journal-photo-story-heading { display:block; } }
+
+
+/* Photo essay presentation: images are editorial visuals, not duplicate article cards. */
+.journal-photo-card { margin:0; }
+.journal-photo-card-image { display:block; height:245px; overflow:hidden; background:#E9EDEF; }
+.journal-photo-card-feature .journal-photo-card-image { height:310px; }
+.journal-photo-card-image img { display:block; width:100%; height:100%; object-fit:cover; transition:transform .6s ease; }
+.journal-photo-card:hover .journal-photo-card-image img { transform:scale(1.035); }
+.journal-photo-card figcaption { padding-top:14px; }
+.journal-photo-card h3 { margin:8px 0 0; color:#142D43; font-family:'Manrope',sans-serif; font-size:19px; line-height:1.35; font-weight:600; }
+@media(max-width:800px) { .journal-photo-card-feature .journal-photo-card-image { height:280px; } }
+@media(max-width:560px) { .journal-photo-card-image,.journal-photo-card-feature .journal-photo-card-image { height:240px; } }
